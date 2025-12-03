@@ -25,3 +25,16 @@ The project is currently in the planning and documentation phase. The files are 
 ## Usage
 
 This directory serves as the central repository for the project's foundational documents. The contents are used for planning, internal alignment, and creating the actual assets for the platform (like the landing pages and forms). It is a non-code project focused on project management and documentation.
+
+## IMPORTANT: Public Repository Rules
+
+This repository is **publicly available on GitHub**. The following information **MUST NOT be included**:
+
+1. **Personal Information**: Real names, email addresses, phone numbers, addresses
+2. **Specific Company Names**: Any real company/organization names other than "Tokyo Denki University Faculty of Engineering Part II"
+3. **Confidential Information**: Internal contacts, non-public operational details
+
+### Acceptable Alternatives
+- Placeholders: `〇〇株式会社`, `example@dendai.ac.jp`, `03-XXXX-XXXX`
+- Anonymized personas: `Student A`, `Manager B`, `Staff C`, etc.
+- Title-only references: `工学部第二部長` (without personal name)
