@@ -26,6 +26,42 @@ The project is currently in the planning and documentation phase. The files are 
 
 This directory serves as the central repository for the project's foundational documents. The contents are used for planning, internal alignment, and creating the actual assets for the platform (like the landing pages and forms). It is a non-code project focused on project management and documentation.
 
+## Metadata Specification
+
+All documents MUST include the following YAML frontmatter:
+
+```yaml
+---
+title: Document Title
+category: 00_全体・要件定義 | 10_内部規定・マニュアル | 30_学生向け資料 | 40_企業向け資料
+doc_type: 定義書 | 設計書 | 規約 | マニュアル | 研修資料 | 雛形 | 案内
+audience:
+  - 学生
+  - 企業
+  - 事務局
+version: "1.0"
+status: 🔴Draft | 🟡Review | 🟢Release
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+owner: 工学部第二部長
+review_cycle: 年1回 | 学期毎 | 随時
+---
+```
+
+### Field Descriptions
+| Field | Required | Description |
+|-------|----------|-------------|
+| `title` | ✅ | Document title |
+| `category` | ✅ | Category corresponding to file prefix |
+| `doc_type` | ✅ | Document type |
+| `audience` | ✅ | Target readers (multiple allowed) |
+| `version` | ✅ | Semantic version (as string) |
+| `status` | ✅ | Approval status |
+| `created` | ✅ | Creation date |
+| `updated` | ✅ | Last update date (MUST update on edit) |
+| `owner` | ✅ | Approval authority (always "工学部第二部長") |
+| `review_cycle` | ✅ | Review frequency |
+
 ## IMPORTANT: Public Repository Rules
 
 This repository is **publicly available on GitHub**. The following information **MUST NOT be included**:

@@ -19,9 +19,43 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 編集時の注意
 
 - Obsidian形式のMarkdownを使用（`[表示名](ファイル名.md)`形式の内部リンク）
-- 各ファイルにはYAMLフロントマター（title, tags, date, version, author, status）が含まれる
-- ステータスは絵文字で表現: 🟢確定, 🟡レビュー中, 🔴ドラフト など
 - コールアウト構文を使用: `> [!NOTE]`, `> [!WARNING]`, `> [!DANGER]`, `> [!ABSTRACT]`
+
+## メタデータ仕様
+
+各ドキュメントには以下のYAMLフロントマターを必ず含めること：
+
+```yaml
+---
+title: ドキュメントタイトル
+category: 00_全体・要件定義 | 10_内部規定・マニュアル | 30_学生向け資料 | 40_企業向け資料
+doc_type: 定義書 | 設計書 | 規約 | マニュアル | 研修資料 | 雛形 | 案内
+audience:
+  - 学生
+  - 企業
+  - 事務局
+version: "1.0"
+status: 🔴Draft | 🟡Review | 🟢Release
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+owner: 工学部第二部長
+review_cycle: 年1回 | 学期毎 | 随時
+---
+```
+
+### フィールド説明
+| フィールド | 必須 | 説明 |
+|------------|------|------|
+| `title` | ✅ | ドキュメントのタイトル |
+| `category` | ✅ | ファイル番号に対応するカテゴリ |
+| `doc_type` | ✅ | 文書の種類 |
+| `audience` | ✅ | 対象読者（複数可） |
+| `version` | ✅ | セマンティックバージョン（文字列） |
+| `status` | ✅ | 承認状態 |
+| `created` | ✅ | 作成日 |
+| `updated` | ✅ | 最終更新日（編集時に必ず更新） |
+| `owner` | ✅ | 承認権限者（常に「工学部第二部長」） |
+| `review_cycle` | ✅ | 定期見直し頻度 |
 
 ## 公開リポジトリのため厳守事項
 
